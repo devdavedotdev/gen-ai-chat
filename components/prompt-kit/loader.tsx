@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion } from "motion"
 
 // Style constants
 const DOT_SIZE = "size-2"
