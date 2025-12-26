@@ -89,22 +89,22 @@ export function useChatCore({
     })
   }, [])
 
+  // Local state for input (no longer provided by useChat in v3.x)
+  const [input, setInput] = useState(draftValue)
+
   // Initialize useChat
   const {
     messages,
-    input,
     handleSubmit,
     status,
     error,
     reload,
     stop,
     setMessages,
-    setInput,
     append,
   } = useChat({
     api: API_ROUTE_CHAT,
     initialMessages,
-    initialInput: draftValue,
     onFinish: async (m) => {
       cacheAndAddMessage(m)
       try {
